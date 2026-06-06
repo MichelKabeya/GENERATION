@@ -32,7 +32,7 @@ class Generation : AppCompatActivity() {
         "Grew up during World War II and the early Cold War. Often associated with discipline, loyalty, and conformity.",
         "Born during the post-war population boom. Witnessed the Civil Rights Movement, the Vietnam War, and the Apollo 11 Moon Landing.",
         "Grew up during the rise of personal computers, video games, and cable TV. Experienced the end of the Cold War and the transition from analog to digital technology.",
-        "Witnessed the expansion of the internet, mobile phones, and social media. Their formative years were influenced by the September 11 Attacks and the Global Financial Crisis.",
+        "Know as MILLENNIALS. Witnessed the expansion of the internet, mobile phones, and social media. Their formative years were influenced by the September 11 Attacks and the Global Financial Crisis.",
         "First generation to grow up fully connected to smartphones and social media. Experienced online learning, streaming platforms, and the COVID-19 Pandemic during their youth.",
         "Growing up with artificial intelligence, smart devices, voice assistants, and advanced digital education tools. Often called the most technologically immersed generation.",
         "Expected to grow up in a world where AI, automation, robotics, and possibly autonomous transportation are commonplace. Their defining experiences are still emerging.",
@@ -55,11 +55,13 @@ class Generation : AppCompatActivity() {
         // On click listener for check button
         checkBtn.setOnClickListener {
             val yearString = userYear.text.toString()
+            // display error if no input
             if (yearString.isEmpty()) {
                 userYear.error = "Please enter a year"
                 return@setOnClickListener
             }
             val year = yearString.toIntOrNull()
+            // display error if input is null or not a number
             if (year == null || year < 1000) {
                 userYear.error = "Please enter a valid year"
                 return@setOnClickListener
@@ -120,7 +122,7 @@ class Generation : AppCompatActivity() {
         resetBtn.setOnClickListener {
             // reset all variables
             genView.text = ""
-            descripView.text = ""
+            descripView.text = "Description"
             userYear.text.clear()
             checkBtn.visibility = Button.VISIBLE
             checkBtn.isEnabled = true
