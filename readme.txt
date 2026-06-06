@@ -1,0 +1,19 @@
+Generation is a simple and educational application that helps users discover which generation they belong to based on their year of birth.
+
+Users enter their birth year, and the application instantly identifies their generation, displays its name, and provides a brief overview of the characteristics, historical events, technologies, and cultural trends that shaped people born during that period.
+
+The app offers an engaging way to learn about generational differences, helping users better understand their own experiences and how they compare with those of other age groups. Whether you are curious about being a Baby Boomer, Gen X, Millennial, Gen Z, or part of a future generation, Generation provides quick and informative insights in a user-friendly interface.
+
+
+| Generation                 | Birth Years | Key Characteristics and Pivotal Moments                                                                                                                                                                                  |
+| -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Lost Generation            | 1883–1900   | Grew up during rapid industrialization and witnessed World War I. Many experienced economic hardship and social change.                                                                                                  |
+| Greatest Generation        | 1901–1927   | Lived through the Great Depression and fought or contributed during World War II. Known for resilience and civic duty.                                                                                                   |
+| Silent Generation          | 1928–1945   | Grew up during World War II and the early Cold War. Often associated with discipline, loyalty, and conformity.                                                                                                           |
+| Baby Boomers               | 1946–1964   | Born during the post-war population boom. Witnessed the Civil Rights Movement, the Vietnam War, and the Apollo 11 Moon Landing.                                                                                          |
+| Generation X               | 1965–1980   | Grew up during the rise of personal computers, video games, and cable TV. Experienced the end of the Cold War and the transition from analog to digital technology.                                                      |
+| Millennials (Generation Y) | 1981–1996   | Witnessed the expansion of the internet, mobile phones, and social media. Their formative years were influenced by the September 11 Attacks and the Global Financial Crisis.                                             |
+| Generation Z               | 1997–2012   | First generation to grow up fully connected to smartphones and social media. Experienced online learning, streaming platforms, and the COVID-19 Pandemic during their youth.                                             |
+| Generation Alpha           | 2013–2024   | Growing up with artificial intelligence, smart devices, voice assistants, and advanced digital education tools. Often called the most technologically immersed generation.                                               |
+| Generation Beta*           | 2025–2039   | Expected to grow up in a world where AI, automation, robotics, and possibly autonomous transportation are commonplace. Their defining experiences are still emerging.                                                    |
+| Generation Gamma*          | 2040–2054   | A projected future generation. Likely to experience technologies and societal changes that are difficult to predict today, potentially including advanced AI integration, biotechnology, and space-related developments. |

@@ -47,7 +47,6 @@ class Generation : AppCompatActivity() {
         val descripView = findViewById<TextView>(R.id.descripView)
         val genView = findViewById<TextView>(R.id.genView)
         val userYear = findViewById<EditText>(R.id.userYear)
-        val year = userYear.text.toString().toInt()
         val checkBtn = findViewById<Button>(R.id.CheckBtn)
         val resetBtn = findViewById<Button>(R.id.resetBtn)
         resetBtn.visibility = Button.INVISIBLE
@@ -55,56 +54,80 @@ class Generation : AppCompatActivity() {
 
         // On click listener for check button
         checkBtn.setOnClickListener {
+            val yearString = userYear.text.toString()
+            if (yearString.isEmpty()) {
+                userYear.error = "Please enter a year"
+                return@setOnClickListener
+            }
+            val year = yearString.toIntOrNull()
+            if (year == null || year < 1000) {
+                userYear.error = "Please enter a valid year"
+                return@setOnClickListener
+            }
+
             resetBtn.visibility = Button.VISIBLE
             resetBtn.isEnabled = true
             // settings conditions for generations
-            if (year < 1900) {
-                genView.text = arrGen[0]
-                descripView.text = arrDesc[0]
-            } else
-                if (year in 1900..<1928) {
+            when (year) {
+                in 1001..<1900 -> {
+                    genView.text = arrGen[0]
+                    descripView.text = arrDesc[0]
+                }
+                in 1900..<1928 -> {
                     genView.text = arrGen[1]
                     descripView.text = arrDesc[1]
-                } else
-                    if (year in 1928..<1946) {
-                        genView.text = arrGen[2]
-                        descripView.text = arrDesc[2]
-                    } else
-                        if (year in 1946..<1965) {
-                            genView.text = arrGen[3]
-                            descripView.text = arrDesc[3]
-                        } else
-                            if (year in 1965..<1981) {
-                                genView.text = arrGen[4]
-                                descripView.text = arrDesc[4]
-                            } else
-                                if (year in 1981..<1997) {
-                                    genView.text = arrGen[5]
-                                    descripView.text = arrDesc[5]
-                                } else
-                                    if (year in 1997..<2013) {
-                                        genView.text = arrGen[6]
-                                        descripView.text = arrDesc[6]
-                                    } else
-                                        if (year in 2013..<2025) {
-                                            genView.text = arrGen[7]
-                                            descripView.text = arrDesc[7]
-                                        } else
-                                            if (year in 2025..<2040) {
-                                                genView.text = arrGen[8]
-                                                descripView.text = arrDesc[8]
-                                            } else {
-                                                genView.text = arrGen[9]
-                                                descripView.text = arrDesc[9]
-                                            }
-
-
+                }
+                in 1928..<1946 -> {
+                    genView.text = arrGen[2]
+                    descripView.text = arrDesc[2]
+                }
+                in 1946..<1965 -> {
+                    genView.text = arrGen[3]
+                    descripView.text = arrDesc[3]
+                }
+                in 1965..<1981 -> {
+                    genView.text = arrGen[4]
+                    descripView.text = arrDesc[4]
+                }
+                in 1981..<1997 -> {
+                    genView.text = arrGen[5]
+                    descripView.text = arrDesc[5]
+                }
+                in 1997..<2013 -> {
+                    genView.text = arrGen[6]
+                    descripView.text = arrDesc[6]
+                }
+                in 2013..<2025 -> {
+                    genView.text = arrGen[7]
+                    descripView.text = arrDesc[7]
+                }
+                in 2025..<2040 -> {
+                    genView.text = arrGen[8]
+                    descripView.text = arrDesc[8]
+                }
+                else -> {
+                    genView.text = arrGen[9]
+                    descripView.text = arrDesc[9]
+                }
+            }
 
             // disable check button after clicking
             checkBtn.visibility = Button.INVISIBLE
             checkBtn.isEnabled = false
 
         }
+        // On click listener for reset button
+        resetBtn.setOnClickListener {
+            // reset all variables
+            genView.text = ""
+            descripView.text = ""
+            userYear.text.clear()
+            checkBtn.visibility = Button.VISIBLE
+            checkBtn.isEnabled = true
+            resetBtn.visibility = Button.INVISIBLE
+            resetBtn.isEnabled = false
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

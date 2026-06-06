@@ -30,7 +30,6 @@
         android:id="@+id/genView"
         android:layout_width="329dp"
         android:layout_height="62dp"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="25dp"
         android:textAlignment="center"
         android:textColor="#D9D5D5"
@@ -38,8 +37,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CheckBtn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/userYear"
